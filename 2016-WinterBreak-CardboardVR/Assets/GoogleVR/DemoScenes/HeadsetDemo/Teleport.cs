@@ -17,11 +17,11 @@ using System.Collections;
 
 [RequireComponent(typeof(Collider))]
 public class Teleport : MonoBehaviour, IGvrGazeResponder {
-  private Vector3 startingPosition;
+    private Vector3 startingPosition;
 
   void Start() {
-    startingPosition = transform.localPosition;
-    SetGazedAt(false);
+        SetGazedAt(false);
+        startingPosition = transform.position;
   }
 
   void LateUpdate() {
