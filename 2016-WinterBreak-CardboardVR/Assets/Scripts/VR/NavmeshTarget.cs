@@ -1,12 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class NavmeshTarget : LookTarget {
-
-    //public NavmeshPlayer player;
+public class NavMeshTarget : LookTarget {
 
     public override  void FireEvent()
     {
-        //player.UpdatePath (transform.position);
+        NavMeshPlayer.Instance.SetTarget(transform.position);
     }
 }

@@ -14,6 +14,8 @@ public class LookTarget : MonoBehaviour, IGvrGazeResponder {
 	public float stareTriggerInitialTime = .3f;
 	public float stareTriggerContinueTime = .3f;
 
+    public Renderer rend;
+
 	void Start() {
 		SetGazedAt(false);
 	}
@@ -37,7 +39,14 @@ public class LookTarget : MonoBehaviour, IGvrGazeResponder {
 	}
 
 	public void SetGazedAt(bool gazedAt) {
-		GetComponent<Renderer>().material.color = gazedAt ? hitColor : nonhitColor;
+
+        if (rend == null)
+            rend = GetComponent<Renderer>();
+
+        if (rend == null)
+            rend = GetComponentInChildren<Renderer>();
+        
+        rend.material.color = gazedAt ? hitColor : nonhitColor;
 		lookedAt = gazedAt;
 
 		if (gazedAt)
