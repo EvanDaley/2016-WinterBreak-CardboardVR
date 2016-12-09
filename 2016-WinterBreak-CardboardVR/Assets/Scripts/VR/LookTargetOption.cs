@@ -4,18 +4,41 @@ using UnityEngine;
 
 public class LookTargetOption : LookTarget {
 
-	void Start () 
-	{
-		SetGazedAt(false);
-	}
-		
-	void Update ()
-	{
+    public TargetBehavior myTargetBehavior;
 
-	}
+    public override  void FireEvent()
+    {
+        if (myTargetBehavior == TargetBehavior.attack)
+        {
+            print("Attack");
 
-	public override void FireEvent()
-	{
-		Debug.Log ("Fired");
-	}
+            CombatPlayer.Instance.basicAttack(this.transform);
+        }
+
+        if (myTargetBehavior == TargetBehavior.ability)
+        {
+            print("Ability");
+        }
+
+        if (myTargetBehavior == TargetBehavior.grenade)
+        {
+            print("Grenade");
+        }
+
+        if (myTargetBehavior == TargetBehavior.move)
+        {
+            NavMeshPlayer.Instance.SetTarget(transform.position);
+        }
+    }
+}
+
+
+public enum TargetBehavior
+{
+    attack,
+    move,
+    ability,
+    grenade,
+    special,
+    beam
 }

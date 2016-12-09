@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 23257217571816248}
   - component: {fileID: 65536606428236822}
   - component: {fileID: 114254132025263112}
-  - component: {fileID: 114689004212696340}
+  - component: {fileID: 114721338515279884}
   m_Layer: 0
   m_Name: NavMeshTarget
   m_TagString: Untagged
@@ -56,7 +56,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1463419125518912}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.9375935, y: 1.55, z: 14.907537}
+  m_LocalPosition: {x: -4.9375935, y: 4.11, z: 14.907537}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4341753605845916}
@@ -197,7 +197,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114689004212696340}
+        - m_Target: {fileID: 114721338515279884}
           m_MethodName: OnGazeEnter
           m_Mode: 1
           m_Arguments:
@@ -214,7 +214,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114689004212696340}
+        - m_Target: {fileID: 114721338515279884}
           m_MethodName: OnGazeExit
           m_Mode: 1
           m_Arguments:
@@ -231,7 +231,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114689004212696340}
+        - m_Target: {fileID: 114721338515279884}
           m_MethodName: OnGazeTrigger
           m_Mode: 1
           m_Arguments:
@@ -296,7 +296,7 @@ MonoBehaviour:
           m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
---- !u!114 &114689004212696340
+--- !u!114 &114721338515279884
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -304,11 +304,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1463419125518912}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d348fcc3e8b94df439cfa84d34aeec53, type: 3}
+  m_Script: {fileID: 11500000, guid: 241a9a7c43e24b141b609792a21453be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitColor: {r: 0, g: 1, b: 0, a: 1}
-  nonhitColor: {r: 1, g: 0, b: 0, a: 1}
-  stareTriggerInitialTime: 0.25
-  stareTriggerContinueTime: 0.5
+  hitColor: {r: 0, g: 1, b: 1, a: 1}
+  nonhitColor: {r: 0, g: 0.21379328, b: 1, a: 1}
+  stareTriggerInitialTime: 0.1
+  stareTriggerContinueTime: 0.3
   rend: {fileID: 23061855010802028}
+  myTargetBehavior: 1
