@@ -25,6 +25,8 @@ public class AttackTarget : LookTarget {
         if (myTargetBehavior == AttackTargetBehavior.basicAttack)
         {
             print("Attack");
+
+            CombatPlayer.Instance.basicAttack(this.transform);
         }
 
         if (myTargetBehavior == AttackTargetBehavior.ability)
